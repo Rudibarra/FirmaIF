@@ -1,0 +1,264 @@
+@bt:#CD163f;
+@gdx:#00549F;
+@if:#00549F;
+@jm:#FC8737;
+
+
+
+
+
+body {
+    background-image: url(../img/gdx-bg.png);
+}
+
+  .title-header{
+    color: #ffffff;
+  }
+
+    .navigation00{
+      display:block;
+      margin-top: 15px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 4px;
+    }
+
+    .fake-tabs{
+      display: block;
+      width: 100%;
+      color: #CCCCCC !important;
+      font-size: 24px;
+      padding: 10px 0;
+      text-align: center;
+      cursor: pointer;
+      outline: none !important ;
+      text-decoration: none !important;
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .no-border-right{
+      border-right: none;
+    }
+
+    .fake-tabs:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+        color: #ffffff !important;
+    }
+    
+    .navigation00 .active-ft{
+      color: #ffffff !important;
+    }
+
+    .gordon{
+  		background: #ececec;
+  		padding: 15px;
+  		margin-top: 15px;
+  		border-radius: 4px;
+  	}
+
+  	.errors{
+  		display:block;
+  		padding: 4px ;
+  		color:#ffffff;
+  		/*background-color: #d00011;*/
+  		background-color: rgba(208, 0, 17, 0.8);
+  		font-size: 12px;
+  		margin-top: 3px;
+  	}
+
+    .arrow-up {
+		  width: 0; 
+		  height: 0; 
+		  border-left: 5px solid transparent;
+		  border-right: 5px solid transparent;
+		  border-bottom: 5px solid rgba(208, 0, 17, 0.44);
+		}
+
+		.btn-success, .btn-default{
+			width: 100%;
+			font-size: 15px;
+			padding: 10px 15px;
+      font-size: 18px;
+		}
+
+		.btn-default{
+			background-color: #333333 !important;
+			color: #ffffff !important;
+		}
+
+
+    .navbar{
+      margin-bottom: 5px;
+    }
+
+    #red{
+      display: block;
+      background: white;
+      border: 1px solid #CCCCCC;
+      padding: 15px;
+      overflow:scroll;
+      height: 300px;
+      margin: 0 0 15px 0;
+    }
+
+    .btn-copy{
+      margin-top: 15px;
+    }
+
+    hr{
+          border-top: 1px solid #CCCCCC;
+    }
+    
+     h3, h4{
+      padding: 0 0 15px 0;
+      margin:0 0 15px 0;
+      border-bottom: 1px solid #CCCCCC;
+    }
+
+
+    .cw50{
+      width: 50%;
+    }
+
+    .hardcore{
+      font-weight: bold;
+    }
+
+
+    .modal-header {
+        padding: 15px 15px 0px 15px;
+        border-bottom: none;
+    }
+
+    .modal-header h3{
+      padding: 0 0 0px 0;
+      margin:0 0 0px 0;
+      border-bottom: none;
+    }
+
+    .nav-pills li{
+      width: 33.18%;
+      background-color: #ececec;
+
+    }
+
+    .nav-pills li a{
+      font-size: 22px;
+      color: #CCCCCC;
+    }
+
+    .modal-body{
+      padding: 0 15px 15px 15px;
+    }
+
+    .modal-body .tab-content .btn-default{
+      width: auto;
+      font-size: 14px;
+    }
+
+    .modal-body .tab-content .btn-success{
+      width: auto;
+      font-size: 16px;
+    }
+
+
+    .modal-body .tab-content .tab-pane{
+      padding: 15px;
+    }
+
+    .modal-body .tab-content .tab-pane p{
+      font-size: 18px;
+    }
+
+    .img-wrapper{
+    }
+
+    .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+        color: #fff;
+        background-color: #333333;
+    }
+
+
+    .scroll-box{
+      display: block;
+      overflow: scroll;
+      background: white;
+      padding: 15px;
+    }
+
+/*Backtrend
+---------------------*/
+    .bt{
+
+      .active-ft{
+        background-color: @bt;
+      }
+      .btn-success{
+        background-color: @bt;
+        border-color:@bt;
+      }
+
+      .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+          background-color: @bt;
+      }
+
+    }
+
+/*GDX
+---------------------*/
+    .gdx{
+      .active-ft{
+        background-color: @gdx;
+      }
+
+      .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+          background-color: @gdx;
+      }
+
+      .btn-success{
+        background-color: @gdx;
+        border-color:@gdx;
+      }
+    }
+
+/*IF
+---------------------*/
+
+    .if{
+      .active-ft{
+        background-color: @if;
+      }
+  
+      .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+          background-color: @if;
+      }
+
+      .btn-success{
+        background-color: @if;
+        border-color:@if;
+      }
+    }
+
+/*JUNO
+---------------------*/
+    .jm{
+      .active-ft{
+        background-color: @jm;
+      }
+      .btn-success{
+        background-color: @jm;
+        border-color: @jm;
+      }
+
+      .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+          background-color: @jm;
+      }
+
+    }
+
+    @media (max-width: 991px) {
+       .nav-pills li {
+           width: 32.8%;
+           background-color: #ececec;
+       }
+    }

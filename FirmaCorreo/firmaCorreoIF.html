@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Firma de correo Interfactura</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/simple.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Google analytics -->
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-89544710-1', 'auto');
+        ga('send', 'pageview');
+        setTimeout(“ga(‘send’,’event’,’Ajuste de Tasa de Rebote’,’Mas de 20 segundos de permanencia’)”,20000);
+        
+        </script>
+        <!-- / Google analytics -->
+  </head>
+  <body class="if">
+
+      <div class="container">
+        <div class="col-sm-12">
+          <div class="row"><h2 class="title-header">Firma de correo electrónico</h2></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="navigation00 clearfix">
+
+          <div class="col-sm-3">
+            <div class="row"><a href="firmaCorreoBacktrend.html" class="fake-tabs no-border-right">Backtrend</a></div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="row"><a href="firmaCorreoGDX.html" class="fake-tabs clearfix">GDX</a></div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="row"><a href="#" class="fake-tabs active-ft  clearfix">Interfactura</a></div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="row"><a href="firmaCorreoJuno.html" class="fake-tabs clearfix">Juno Mx</a></div>
+          </div>
+
+        </div>
+      </div>
+
+    <div class="container boxed">
+      <div class="row">
+      	<div class="col-sm-4">
+      		<div class="gordon">
+            <h4>Información requerida</h4>
+  	    	  <form name="userInput">
+  		      	<div class="form-group">
+  		      	  <label for="">Nombre(s)</label>
+  		          <input  id="name" type="text" name="textInput" class="form-control" />
+  		          <div id="nameError" class="errors"></div>
+  				    </div>
+
+              <div class="form-group">
+                <label for="">Apellido</label>
+                <input  id="lastName" type="text" name="textInput" class="form-control" />
+                <div id="lastNameError" class="errors"></div>
+              </div>
+
+      				<div class="form-group">
+      				    <label >Correo electrónico</label>
+                    <!--data-toggle="tooltip" title="El correo esta compuesto de Nombre y apellido, separados por un punto"-->
+        				    <input class="form-control" id="mail" type="text" name="textInput"  pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+        				required/>
+      					<div id="mailError" class="errors"></div>
+      				</div>
+
+  		        <div class="form-group">
+  		          <label>Extensión de teléfono</label>
+  		          <input id="phone" type="text" name="textInput" class="form-control" maxlength="4" />
+  		          <div id="phoneError" class="errors"></div>
+  		        </div>
+
+		          <div class="form-group">
+		            <label>Teléfono móvil (opcional)</label>
+		            <input id="celphone" type="text" name="textInput" class="form-control" maxlength="20" />
+		            <div id="celphoneError" class="errors"></div>
+		          </div>
+  		        <a href="#" id="confirm" class="btn btn-success">Generar firma</a>
+  	      	</form>
+    	    </div>
+    	  </div>
+
+      	<div class="col-sm-8">
+    	  	<div class="gordon clearfix">
+            <h4>Previsualización</h4>
+            
+            <a href="#myModal" data-target="#myModal" data-toggle="modal" data-backdrop="static" data-keyboard="false" class="btn btn-success" style="margin-bottom: 15px;">Instrucciones</a>
+            <div class="scroll-box">
+              <div id="table">
+                  <table border="0" cellpadding="0" cellspacing="0" width="750" align="left"  style="font-family:sans-serif; font-size:14px;">
+                    <tbody>
+                        <tr>
+                          <td rowspan="4" width="180" valign="top"><img src="http://www.gdx.io/firmas/if_01.png" width="180" height="250" alt=""/></td>
+                          <td width="20" rowspan="4"></td>
+                          <td height="36">&nbsp;</td>
+                          </tr>
+
+                        <tr>
+                          <td valign="botton" height="22"><font size="5" color="#00a8e1"><strong><span class="textOutput">Nombre</span> <span class="textOutputLN">Apellido</span></strong></font><br>
+                            <font size="3"><strong><span class="textOutput2">correo@interfactura.gdx.io</span></strong></font><br><br>
+                                <font size="2"><strong>T.</strong> +52 (00) 0000 0000 <strong>Ext.</strong> <span class="textOutput3">0000</span><br>
+                              <span id="option"><strong>C.</strong> +52 1 <span class="textOutput4">(00) 0000 0000</span></span></font>
+                            </td>
+                          </tr>
+
+                        <tr>
+                          <td>&nbsp;</td>
+                        </tr>
+
+                        <tr>
+                          <td valign="top">
+                            <p>
+                                <font color="#A6A69E" size="1">
+
+                                  Para información relativa a la liberación de responsabilidades, acceda a la siguiente liga que se considera parte integrante del presente mensaje de datos. <font color="#00a8e1"><strong> | <a href="https://www.interfactura.com/disclaimer_es.htm" target="_blank"><font color="#00a8e1">Ver aviso</font></a> | </strong></font><br>
+
+                              For information regarding the disclaimer, please access the following link which is considered an integral part of this data transmission. <font color="#00a8e1"><strong> | <a href="https://www.interfactura.com/disclaimer_es.htm"><font color="#00a8e1">See disclaimer</font></a> | </strong></font>
+                                <br>
+                                No imprimas este mensaje a menos que sea indispensable
+                              </font>
+                            </p>
+                            </td>
+                        </tr>
+                      </tbody>
+                  </table>
+              </div>
+            </div>
+
+            <button class="btn btn-default btn-copy">Copiar para Outlook</button>
+    	  	</div>
+
+
+          <div id="html-c" class="gordon">
+            <xmp id="red">
+            </xmp>
+            <button class="btn btn-default btn-copy2">Copiar HTML para Thunderbird</button>
+          </div>
+    	  </div>
+      </div>
+    </div>
+
+
+
+
+    <div id="myModal" class="modal  slideInDown animated"  role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Instrucciones</h3>
+            <p>Lee atentamente las instrucciones:</p>
+          </div>
+          <div class="modal-body" id="myWizard">
+           <div class="navbar">
+              <div class="navbar-inner">
+                    <ul class="nav nav-pills">
+                       <li class="active"><a href="#step1" data-toggle="tab" data-step="1">Paso 1</a></li>
+                       <li><a href="#step2" data-toggle="tab" data-step="2">Paso 2</a></li>
+                       <li><a href="#step3" data-toggle="tab" data-step="3">Paso 3</a></li>
+                    </ul>
+              </div>
+           </div>
+           <div class="tab-content ">
+              <div class="tab-pane fade in active clearfix" id="step1">
+                <p>Ingresa la información requerida</p>
+                <div class="col-sm-offset-2 col-sm-8">
+                  <video width="90%" autoplay loop style="margin: 0 auto;">
+                    <source src="video/datos.mp4" type="video/mp4">
+                    <source src="video/datos.ogg" type="video/ogg">
+                    Your browser does not support HTML5 video.
+                  </video>
+                </div>
+                <div class="col-sm-12">
+                  <div class="row">
+                    <hr>
+                    <a class="btn btn-success next pull-right" href="#">Siguente</a>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="tab-pane fade clearfix" id="step2">
+                <p>Utiliza el botón <b>"Copiar"</b> para agregar tu firma al <i data-toggle="tooltip" title="portapapales">"clipboard"</i></p>
+                <div class="col-sm-offset-2 col-sm-8"><img src="img/img2.png" alt="" class="img-responsive"></div>
+                <div class="col-sm-offset-2 col-sm-8"><img src="img/img3.png" alt="" class="img-responsive"></div>
+
+                <div class="col-sm-12">
+                  <div class="row">
+                    <hr>
+                    <a class="btn btn-success next pull-right" href="#">Siguente</a>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade clearfix" id="step3">
+                <p>
+                  Sigue las instrucciones indicadas, según el tipo de cliente de correo que utilizes.
+                </p>
+
+                <div class="box">
+                    <p><strong>En Outlook (Escritorio): </strong></p>
+                    <ol>
+                      <li>Selecciona &quot;Archivo&quot; y luego &quot;Opciones&quot; </li>
+                      <li>Elige la opción de &quot;Correo&quot;; valida que en la opción &ldquo;Redactar mensaje en este formato&rdquo; esté seleccionada la casilla &quot;HTML&rdquo; </li>
+                      <li>Después, haz clic en &quot;Firma&quot; y selecciona la opción de &ldquo;Nueva&rdquo;; ponle algún nombre (ejemplo: firma If, If Interfactura. Tu nombre, etc.) </li>
+                      <li>Haz clic en la parte de abajo de la ventana y presiona &ldquo;ctrl+v&rdquo; o haz clic derecho y selecciona la opción &ldquo;Pegar&rdquo; </li>
+                      <li>Haz clic en &ldquo;Guardar&rdquo;. </li>
+                      <li>En la sección de &ldquo;Elegir firma predeterminada&rdquo; cerciórate que tu correo aparezca ahí. Verifica que tengas seleccionada la firma que acabas de crear en las opciones &ldquo;Mensajes Nuevos&rdquo; y &ldquo;Respuestas o Reenvíos&rdquo;. </li>
+                      <li>Haz clic en &ldquo;Aceptar&rdquo; y repite esta opción en las opciones de correo. </li>
+                      <li>Selecciona la opción &ldquo;Nuevo Mensaje de correo electrónico&rdquo; para validar que tu nueva firma esté implementada correctamente. </li>
+                    </ol>
+
+                    <p><strong>En Outlook (Office 365 En línea): </strong></p>
+                    <ol>
+                      <li>Haz clic en &quot;Configurar&quot; (icono del engrane) luego seleccionar &quot;Correo&quot; </li>
+                      <li>Selecciona la opción de &quot;Firma de correo electrónico&rdquo; </li>
+                      <li>Haz clic en la parte inferior de la ventana y presiona &ldquo;ctrl+v&rdquo; o haz clic derecho y selecciona la opción &ldquo;Pegar&rdquo; </li>
+                      <li>Marca las casillas de: </li>
+                      <ul>
+                        <li>&ldquo;Incluir mi firma automáticamente en los mensajes nuevos que redacte&rdquo; </li>
+                        <li>&ldquo;Incluir automáticamente mi firma en los mensajes que reenvíe o responda&rdquo; </li>
+                      </ul>
+                      <li>Haz clic en &ldquo;Guardar&rdquo;. </li>
+                      <li>Regresa a tu &ldquo;Bandeja de entrada&rdquo; y selecciona la opción de &ldquo;Nuevo mensaje de correo&rdquo; para validar que tu nueva firma esté implementada correctamente </li>
+                    </ol>
+
+                    <p><strong>En Thunderbird </strong></p>
+                    <ol>
+                      <li>Haz clic en el menú &ldquo;Herramientas&rdquo;, seguido de &ldquo;Configuración de las cuentas&rdquo;.</li>
+                      <li>Marca la casilla &ldquo;Usar HTML&rdquo;.</li>
+                      <li>Haz clic en la parte de abajo de la ventana y presiona &ldquo;ctrl+v&rdquo; o haz clic derecho y selecciona la opción &ldquo;Pegar&rdquo;</li>
+                      <li>Da clic en &ldquo;Aceptar&rdquo;.</li>
+                      <li>Selecciona la opción &ldquo;Nuevo Mensaje&rdquo; para validar que tu nueva firma esté implementada correctamente.</li>
+                    </ol>
+                </div>
+
+                <div class="col-sm-12">
+                  <div class="row">
+                    <hr>
+                    <a class="btn btn-success pull-right" data-dismiss="modal" aria-hidden="true">Aceptar</a>
+                  </div>
+                </div>
+              </div>
+           </div>
+          </div>
+          <!--<div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <button class="btn btn-primary">Save changes</button>
+          </div>-->
+        </div>
+      </div>
+    </div>
+
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+    <script src="js/bootstrap.js"></script>
+  	<script>
+
+
+
+      $(document).ready(function(){        
+        $('#myModal').modal({backdrop: 'static', keyboard: false})  
+        $('[data-toggle="tooltip"]').tooltip();   
+
+
+
+        $('.next').click(function(){
+          var nextId = $(this).parents('.tab-pane').next().attr("id");
+          $('[href=#'+nextId+']').tab('show');
+          return false;
+        })
+
+        
+        $('.first').click(function(){
+        
+          $('#myWizard a:first').tab('show')
+        
+        })
+
+      });
+
+  	$(function (){
+
+  		jQuery.fn.ForceNumericOnly =
+  		    function() {
+  		        return this.each(function() {
+  		            $(this).keydown(function(e) {
+  		                var key = e.charCode || e.keyCode || 0;
+  		                // allow backspace, tab, delete, enter, arrows, numbers and keypad numbers ONLY
+  		                // home, end, period, and numpad decimal
+  		                return (
+  		                    key == 8 ||
+  		                    key == 9 ||
+  		                    key == 13 ||
+  		                    key == 46 ||
+  		                    key == 110 ||
+  		                    key == 190 ||
+  		                    (key >= 35 && key <= 40) ||
+  		                    (key >= 48 && key <= 57) ||
+  		                    (key >= 96 && key <= 105));
+  		            });
+  		        });
+  		    };
+
+      $('[data-toggle="tooltip"]').tooltip();   
+  		$("#phone").ForceNumericOnly();
+      $("#celphone").ForceNumericOnly();
+
+  		$("#nameError").hide();
+  		$("#phoneError").hide();
+  		$("#mailError").hide();
+  		$("#celphoneError").hide();
+
+      $('#lastNameError').hide();
+      $('#html-c').hide();
+      $(".btn-copy, .btn-copy2").hide();
+
+  		var nameErrorMessage = false;
+  		var mailErrorMessage = false;
+  		var phoneErrorMessage = false;
+  		var celphoneErrorMessage = false;
+      var lastName = false;
+
+  		$('#confirm').click(function(){
+  			var playerName = $('#name').val();
+  			var playerMail = $('#mail').val();
+  			var playerPhone = $('#phone').val();
+  			var playerCelPhone = $('#celphone').val();
+        var playerlastName = $('#lastName').val();
+
+  			var name = $("#name").val();
+  			var mail = $("#mail").val();
+  			var phone = $("#phone").val();
+  			var celphone = $("#celphone").val();
+        var lastName = $("#lastName").val();
+
+
+        var codigo = $('#table').html();
+
+  			if(name ==""){
+  				$("#nameError").html("Información requerida");
+  				$("#nameError").show();
+  			} else{
+  				$("#nameError").hide();
+  		      	$(".textOutput").html(playerName);
+  		      	nameErrorMessage = true;
+  			}
+
+  			if(mail ==""){
+  				$("#mailError").html("Información requerida");
+  				$("#mailError").show();
+  			} else{
+  				$("#mailError").hide();
+  				$(".textOutput2").html(playerMail);
+  				mailErrorMessage = true;
+  			}
+
+  			if(phone ==""){
+  				$("#phoneError").html("Información requerida");
+  				$("#phoneError").show();
+  			} else{
+  				$("#phoneError").hide();
+  				$(".textOutput3").html(playerPhone);
+  				phoneErrorMessage = true;
+
+  			}
+
+  			if(celphone ==""){
+  				$("#option").hide()
+  			} else{
+  				$(".textOutput4").html(playerCelPhone);
+  			}
+
+        if(lastName ==""){
+          $("#lastNameError").html("Información requerida");
+          $("#lastNameError").show();
+        } else{
+          $("#lastNameError").hide();
+          $(".textOutputLN").html(playerlastName);
+          celphoneErrorMessage = true;
+
+        }
+
+        if(mail != "" && phone != ""  && name != "" && lastName != "")
+        {
+          $('#html-c').show();
+          $("#red").empty();
+          $("#red").html(codigo);
+          $(".btn-copy, .btn-copy2").show();
+        }
+
+  		});
+  	});
+  	</script>
+    <script src="js/clipboard.js"></script>
+
+    <!-- 1. Define some markup -->
+
+    <!-- 3. Instantiate clipboard -->
+    <script>
+    var clipboard = new Clipboard('.btn-copy', {
+        target: function() {
+            return document.querySelector('#table');
+        }
+    });
+
+    var clipboard = new Clipboard('.btn-copy2', {
+        target: function() {
+            return document.querySelector('#red');
+        }
+    });
+
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+    </script>
+
+
+
+  </body>
+</html>
+
+
