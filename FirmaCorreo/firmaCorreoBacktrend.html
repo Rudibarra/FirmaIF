@@ -36,15 +36,18 @@
   <body class="bt">
 
       <div class="container">
-        <div class="col-sm-12">
-          <div class="row"><h2 class="title-header">Firma de correo electrónico</h2></div>
+        <div class="col-sm-12 mt20">
+          <div class="row">
+            <img class="pull-left" src="img/gidix-logo.png" alt="gidix-logo" width="220" >
+            <h2 class="pull-left title-header">Firma de correo electrónico</h2>
+          </div>
         </div>
       </div>
 
       <div class="container">
         <div class="navigation00 clearfix">
           <div class="col-sm-3">
-            <div class="row"><a href="#" class="fake-tabs no-border-right active-ft ">Backtrend</a></div>
+            <div class="row"><a href="#" class="fake-tabs  active-ft ">Backtrend</a></div>
           </div>
 
           <div class="col-sm-3">
@@ -56,7 +59,7 @@
           </div>
 
           <div class="col-sm-3">
-            <div class="row"><a href="firmaCorreoJuno.html" class="fake-tabs clearfix">Juno Mx</a></div>
+            <div class="row"><a href="firmaCorreoJuno.html" class="fake-tabs clearfix no-border-right">Juno Mx</a></div>
           </div>
         </div>
       </div>
@@ -79,13 +82,19 @@
                 <div id="lastNameError" class="errors"></div>
               </div>
 
-      				<div class="form-group">
-      				    <label >Correo electrónico</label>
+			        <div class="form-group">
+                  <label >Correo electrónico</label>
                     <!--data-toggle="tooltip" title="El correo esta compuesto de Nombre y apellido, separados por un punto"-->
-        				    <input class="form-control" id="mail" type="text" name="textInput"  pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
-        				required/>
-      					<div id="mailError" class="errors"></div>
-      				</div>
+                    <input class="form-control" id="mail" type="text" name="textInput"  pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                required placeholder="nombre.apellido@backtrend.gdx.io"/>
+                <div id="mailError" class="errors"></div>
+              </div>
+
+              <div class="form-group">
+                <label>Teléfono fijo</label>
+                <input id="fixedPhone" type="text" name="textInput" class="form-control" maxlength="30" placeholder="(00) 0000 0000"/>
+                <div id="fixedPhoneError" class="errors"></div>
+              </div>
 
   		        <div class="form-group">
   		          <label>Extensión de teléfono</label>
@@ -95,7 +104,7 @@
 
 		          <div class="form-group">
 		            <label>Teléfono móvil (opcional)</label>
-		            <input id="celphone" type="text" name="textInput" class="form-control" maxlength="20" />
+		            <input id="celphone" type="text" name="textInput" class="form-control" maxlength="30"  placeholder="(00) 0000 0000"/>
 		            <div id="celphoneError" class="errors"></div>
 		          </div>
   		        <a href="#" id="confirm" class="btn btn-success">Generar firma</a>
@@ -118,10 +127,12 @@
                         <td height="36">&nbsp;</td>
                         </tr>
                       <tr>
-                        <td valign="botton" height="22"><font size="5" color="#cd163f"><strong><span class="textOutput">Nombre<span class="textOutput"> <span class="textOutputLN">Apellido</span></strong></font><br>
+                        <td valign="botton" height="22"><font size="5" color="#cd163f"><strong><span class="textOutput">Nombre</span> <span class="textOutputLN">Apellido</span></strong></font><br>
                           <font size="3"><strong><span class="textOutput2">correo@backtrend.gdx.io</span></strong></font><br><br>
-                              <font size="2"><strong>T.</strong> +52 (00) 0000 0000 <strong>Ext.</strong> <span class="textOutput3">0000</span><br>
-                            <span id="option"><strong>C.</strong> +52 1 <span class="textOutput4">(00) 0000 0000</span></font></span>
+                              <font size="2"><strong>T.</strong> +52 <span class="textOutputFXP">(00) 0000 0000</span> 
+                              <strong>Ext.</strong> <span class="textOutput3">0000</span><br>
+                              <span id="option"><strong>C.</strong> +52 1 <span class="textOutput4">(00) 0000 0000</span></span>
+                          </font>
                           </td>
                         </tr>
                       <tr>
@@ -147,19 +158,17 @@
     	  	</div>
 
 
-          <div id="html-c" class="gordon">
+          <!--<div id="html-c" class="gordon">
             <xmp id="red">
             </xmp>
             <button class="btn btn-default btn-copy2">Copiar HTML para Thunderbird</button>
-          </div>
+          </div>-->
     	  </div>
       </div>
     </div>
 
 
-
-
-    <div id="myModal" class="modal  slideInDown animated"  role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div id="myModal" class="modal  slideInDown animated"  role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" tabindex="-1">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
@@ -190,7 +199,7 @@
                 <div class="col-sm-12">
                   <div class="row">
                     <hr>
-                    <a class="btn btn-success next pull-right" href="#">Siguente</a>
+                    <a class="btn btn-success next pull-right" href="#">Siguiente</a>
                   </div>
                 </div>
               </div>
@@ -204,7 +213,7 @@
                 <div class="col-sm-12">
                   <div class="row">
                     <hr>
-                    <a class="btn btn-success next pull-right" href="#">Siguente</a>
+                    <a class="btn btn-success next pull-right" href="#">Siguiente</a>
                   </div>
                 </div>
               </div>
@@ -240,14 +249,14 @@
                       <li>Regresa a tu &ldquo;Bandeja de entrada&rdquo; y selecciona la opción de &ldquo;Nuevo mensaje de correo&rdquo; para validar que tu nueva firma esté implementada correctamente </li>
                     </ol>
 
-                    <p><strong>En Thunderbird </strong></p>
+                    <!--<p><strong>En Thunderbird </strong></p>
                     <ol>
                       <li>Haz clic en el menú &ldquo;Herramientas&rdquo;, seguido de &ldquo;Configuración de las cuentas&rdquo;.</li>
                       <li>Marca la casilla &ldquo;Usar HTML&rdquo;.</li>
                       <li>Haz clic en la parte de abajo de la ventana y presiona &ldquo;ctrl+v&rdquo; o haz clic derecho y selecciona la opción &ldquo;Pegar&rdquo;</li>
                       <li>Da clic en &ldquo;Aceptar&rdquo;.</li>
                       <li>Selecciona la opción &ldquo;Nuevo Mensaje&rdquo; para validar que tu nueva firma esté implementada correctamente.</li>
-                    </ol>
+                    </ol>-->
                 </div>
 
                 <div class="col-sm-12">
@@ -259,182 +268,35 @@
               </div>
            </div>
           </div>
-          <!--<div class="modal-footer">
-            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-            <button class="btn btn-primary">Save changes</button>
-          </div>-->
         </div>
       </div>
     </div>
 
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
-    <script src="js/bootstrap.js"></script>
-  	<script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+      <script src="js/bootstrap.js"></script>
+      <script src="js/firma.js"></script>
+      <script src="js/clipboard.js"></script>
+      <script>
+          var clipboard = new Clipboard('.btn-copy', {
+              target: function() {
+                  return document.querySelector('#table');
+              }
+          });
 
+          var clipboard = new Clipboard('.btn-copy2', {
+              target: function() {
+                  return document.querySelector('#red');
+              }
+          });
 
+          clipboard.on('success', function(e) {
+              console.log(e);
+          });
 
-      $(document).ready(function(){        
-        $('#myModal').modal({backdrop: 'static', keyboard: false})  
-        $('[data-toggle="tooltip"]').tooltip();   
-
-
-
-        $('.next').click(function(){
-          var nextId = $(this).parents('.tab-pane').next().attr("id");
-          $('[href=#'+nextId+']').tab('show');
-          return false;
-        })
-
-        $('.first').click(function(){
-
-          $('#myWizard a:first').tab('show')
-
-        })
-
-      });
-
-  	$(function (){
-
-  		jQuery.fn.ForceNumericOnly =
-  		    function() {
-  		        return this.each(function() {
-  		            $(this).keydown(function(e) {
-  		                var key = e.charCode || e.keyCode || 0;
-  		                // allow backspace, tab, delete, enter, arrows, numbers and keypad numbers ONLY
-  		                // home, end, period, and numpad decimal
-  		                return (
-  		                    key == 8 ||
-  		                    key == 9 ||
-  		                    key == 13 ||
-  		                    key == 46 ||
-  		                    key == 110 ||
-  		                    key == 190 ||
-  		                    (key >= 35 && key <= 40) ||
-  		                    (key >= 48 && key <= 57) ||
-  		                    (key >= 96 && key <= 105));
-  		            });
-  		        });
-  		    };
-
-      $('[data-toggle="tooltip"]').tooltip();   
-  		$("#phone").ForceNumericOnly();
-      $("#celphone").ForceNumericOnly();
-
-  		$("#nameError").hide();
-  		$("#phoneError").hide();
-  		$("#mailError").hide();
-  		$("#celphoneError").hide();
-
-      $('#lastNameError').hide();
-      $('#html-c').hide();
-      $(".btn-copy, .btn-copy2").hide();
-
-  		var nameErrorMessage = false;
-  		var mailErrorMessage = false;
-  		var phoneErrorMessage = false;
-  		var celphoneErrorMessage = false;
-      var lastName = false;
-
-  		$('#confirm').click(function(){
-  			var playerName = $('#name').val();
-  			var playerMail = $('#mail').val();
-  			var playerPhone = $('#phone').val();
-  			var playerCelPhone = $('#celphone').val();
-        var playerlastName = $('#lastName').val();
-
-  			var name = $("#name").val();
-  			var mail = $("#mail").val();
-  			var phone = $("#phone").val();
-  			var celphone = $("#celphone").val();
-        var lastName = $("#lastName").val();
-
-
-        var codigo = $('#table').html();
-
-  			if(name ==""){
-  				$("#nameError").html("Información requerida");
-  				$("#nameError").show();
-  			} else{
-  				$("#nameError").hide();
-  		      	$(".textOutput").html(playerName);
-  		      	nameErrorMessage = true;
-  			}
-
-  			if(mail ==""){
-  				$("#mailError").html("Información requerida");
-  				$("#mailError").show();
-  			} else{
-  				$("#mailError").hide();
-  				$(".textOutput2").html(playerMail);
-  				mailErrorMessage = true;
-  			}
-
-  			if(phone ==""){
-  				$("#phoneError").html("Información requerida");
-  				$("#phoneError").show();
-  			} else{
-  				$("#phoneError").hide();
-  				$(".textOutput3").html(playerPhone);
-  				phoneErrorMessage = true;
-
-  			}
-
-  			if(celphone ==""){
-  				$("#option").hide()
-  			} else{
-  				$(".textOutput4").html(playerCelPhone);
-  			}
-
-        if(lastName ==""){
-          $("#lastNameError").html("Información requerida");
-          $("#lastNameError").show();
-        } else{
-          $("#lastNameError").hide();
-          $(".textOutputLN").html(playerlastName);
-          celphoneErrorMessage = true;
-
-        }
-
-        if(mail != "" && phone != ""  && name != "" && lastName != "")
-        {
-          $('#html-c').show();
-          $("#red").empty();
-          $("#red").html(codigo);
-          $(".btn-copy, .btn-copy2").show();
-        }
-
-  		});
-  	});
-  	</script>
-    <script src="js/clipboard.js"></script>
-
-    <!-- 1. Define some markup -->
-
-    <!-- 3. Instantiate clipboard -->
-    <script>
-    var clipboard = new Clipboard('.btn-copy', {
-        target: function() {
-            return document.querySelector('#table');
-        }
-    });
-
-    var clipboard = new Clipboard('.btn-copy2', {
-        target: function() {
-            return document.querySelector('#red');
-        }
-    });
-
-    clipboard.on('success', function(e) {
-        console.log(e);
-    });
-
-    clipboard.on('error', function(e) {
-        console.log(e);
-    });
-    </script>
-
-
-
+          clipboard.on('error', function(e) {
+              console.log(e);
+          });
+      </script>
   </body>
 </html>
 

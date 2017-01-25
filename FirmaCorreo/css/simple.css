@@ -1,6 +1,13 @@
 body {
   background-image: url(../img/gdx-bg.png);
 }
+h2 {
+  padding: 10px;
+  margin: 0 0 0 15px;
+}
+.mt20 {
+  margin-top: 20px;
+}
 .title-header {
   color: #ffffff;
 }
@@ -148,8 +155,8 @@ h4 {
   background-color: #CD163f;
 }
 .bt .btn-success {
-  background-color: #CD163f;
-  border-color: #CD163f;
+  background-color: #CD163f !important;
+  border-color: #CD163f !important;
 }
 .bt .nav-pills > li.active > a,
 .bt .nav-pills > li.active > a:hover,
@@ -167,8 +174,8 @@ h4 {
   background-color: #00549F;
 }
 .gdx .btn-success {
-  background-color: #00549F;
-  border-color: #00549F;
+  background-color: #00549F !important;
+  border-color: #00549F !important;
 }
 /*IF
 ---------------------*/
@@ -181,8 +188,8 @@ h4 {
   background-color: #00549F;
 }
 .if .btn-success {
-  background-color: #00549F;
-  border-color: #00549F;
+  background-color: #00549F !important;
+  border-color: #00549F !important;
 }
 /*JUNO
 ---------------------*/
@@ -190,8 +197,8 @@ h4 {
   background-color: #FC8737;
 }
 .jm .btn-success {
-  background-color: #FC8737;
-  border-color: #FC8737;
+  background-color: #FC8737 !important;
+  border-color: #FC8737 !important;
 }
 .jm .nav-pills > li.active > a,
 .jm .nav-pills > li.active > a:hover,

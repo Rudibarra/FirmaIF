@@ -20,32 +20,35 @@
     <![endif]-->
 
     <!-- Google analytics -->
-        <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-89544710-1', 'auto');
-        ga('send', 'pageview');
-        setTimeout(“ga(‘send’,’event’,’Ajuste de Tasa de Rebote’,’Mas de 20 segundos de permanencia’)”,20000);
-        
-        </script>
+      ga('create', 'UA-89544710-1', 'auto');
+      ga('send', 'pageview');
+      setTimeout(“ga(‘send’,’event’,’Ajuste de Tasa de Rebote’,’Mas de 20 segundos de permanencia’)”,20000);
+    </script>
+
         <!-- / Google analytics -->
   </head>
   <body class="jm">
 
-      <div class="container">
-        <div class="col-sm-12">
-          <div class="row"><h2 class="title-header">Firma de correo electrónico</h2></div>
+    <div class="container">
+      <div class="col-sm-12 mt20">
+        <div class="row">
+          <img class="pull-left" src="img/gidix-logo.png" alt="gidix-logo" width="220" >
+          <h2 class="pull-left title-header">Firma de correo electrónico</h2>
         </div>
       </div>
+    </div>
 
       <div class="container">
         <div class="navigation00 clearfix">
 
           <div class="col-sm-3">
-            <div class="row"><a href="firmaCorreoBacktrend.html" class="fake-tabs no-border-right">Backtrend</a></div>
+            <div class="row"><a href="firmaCorreoBacktrend.html" class="fake-tabs ">Backtrend</a></div>
           </div>
 
           <div class="col-sm-3">
@@ -57,7 +60,7 @@
           </div>
 
           <div class="col-sm-3">
-            <div class="row"><a href="#" class="fake-tabs active-ft clearfix">Juno Mx</a></div>
+            <div class="row"><a href="#" class="fake-tabs active-ft clearfix no-border-right">Juno Mx</a></div>
           </div>
 
         </div>
@@ -85,9 +88,15 @@
       				    <label >Correo electrónico</label>
                     <!--data-toggle="tooltip" title="El correo esta compuesto de Nombre y apellido, separados por un punto"-->
         				    <input class="form-control" id="mail" type="text" name="textInput"  pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
-        				required/>
+        				required placeholder="nombre.apellido@backtrend.gdx.io"/>
       					<div id="mailError" class="errors"></div>
       				</div>
+
+              <div class="form-group">
+                <label>Teléfono fijo</label>
+                <input id="fixedPhone" type="text" name="textInput" class="form-control" maxlength="30" placeholder="(00) 0000 0000"/>
+                <div id="fixedPhoneError" class="errors"></div>
+              </div>
 
   		        <div class="form-group">
   		          <label>Extensión de teléfono</label>
@@ -97,7 +106,7 @@
 
 		          <div class="form-group">
 		            <label>Teléfono móvil (opcional)</label>
-		            <input id="celphone" type="text" name="textInput" class="form-control" maxlength="20" />
+		            <input id="celphone" type="text" name="textInput" class="form-control" maxlength="30" placeholder="(00) 0000 0000" />
 		            <div id="celphoneError" class="errors"></div>
 		          </div>
   		        <a href="#" id="confirm" class="btn btn-success">Generar firma</a>
@@ -108,7 +117,6 @@
       	<div class="col-sm-8">
     	  	<div class="gordon clearfix">
             <h4>Previsualización</h4>
-            
             <a href="#myModal" data-target="#myModal" data-toggle="modal" data-backdrop="static" data-keyboard="false" class="btn btn-success" style="margin-bottom: 15px;">Instrucciones</a>
             <div class="scroll-box">
               <div id="table">
@@ -122,7 +130,7 @@
                     <tr>
                       <td valign="botton" height="22"><font size="5" color="#ef7622"><strong><span class="textOutput">Nombre</span> <span class="textOutputLN">Apellido</span></strong></font><br>
                         <font size="3"><strong><span class="textOutput2">correo@junomx.gdx.io</span></strong></font><br><br>
-                            <font size="2"><strong>T.</strong> +52 (00) 0000 0000 <strong>Ext.</strong> <span class="textOutput3">0000</span><br>
+                            <font size="2"><strong>T.</strong> +52 <span class="textOutputFXP">(00) 0000 0000</span> <strong>Ext.</strong> <span class="textOutput3">0000</span><br>
                             <span id="option"><strong>C.</strong> +52 1 <span class="textOutput4">(00) 0000 0000</span></span></font>
                         </td>
                       </tr>
@@ -131,7 +139,7 @@
                       </tr>
                     <tr>
                         <td valign="top">
-                          <p>
+                        <p>
                         <font color="#A6A69E" size="1">Para información relativa a la liberación de responsabilidades, acceda a la siguiente liga que se considera parte integrante del presente mensaje de datos. <font color="#ef7622"><strong> | <a href="https://www.junomx.com/disclaimer_juno.html" target="_blank"><font color="#ef7622">Ver aviso</font></a> | </strong></font><br>
                         For information regarding the disclaimer, please access the following link which is considered an integral part of this data transmission. <font color="#ef7622"><strong> | <a href="https://www.junomx.com/disclaimer_juno.html"><font color="#ef7622">See disclaimer</font></a> | </strong></font>
                           <br>
@@ -144,24 +152,19 @@
                 </table>
               </div>
             </div>
-
             <button class="btn btn-default btn-copy">Copiar para Outlook</button>
     	  	</div>
 
-
-          <div id="html-c" class="gordon">
+          <!--<div id="html-c" class="gordon">
             <xmp id="red">
             </xmp>
             <button class="btn btn-default btn-copy2">Copiar HTML para Thunderbird</button>
-          </div>
+          </div>-->
     	  </div>
       </div>
     </div>
 
-
-
-
-    <div id="myModal" class="modal  slideInDown animated"  role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div id="myModal" class="modal  slideInDown animated"  role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" tabindex="-1">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
@@ -183,7 +186,7 @@
               <div class="tab-pane fade in active clearfix" id="step1">
                 <p>Ingresa la información requerida</p>
                 <div class="col-sm-offset-2 col-sm-8">
-                  <video width="90%" autoplay loop style="margin: 0 auto;">
+                  <video width="90%" autoplay loop style=" display:block: margin: 0 auto;">
                     <source src="video/datos.mp4" type="video/mp4">
                     <source src="video/datos.ogg" type="video/ogg">
                     Your browser does not support HTML5 video.
@@ -192,7 +195,7 @@
                 <div class="col-sm-12">
                   <div class="row">
                     <hr>
-                    <a class="btn btn-success next pull-right" href="#">Siguente</a>
+                    <a class="btn btn-success next pull-right" href="#">Siguiente</a>
                   </div>
                 </div>
               </div>
@@ -206,7 +209,7 @@
                 <div class="col-sm-12">
                   <div class="row">
                     <hr>
-                    <a class="btn btn-success next pull-right" href="#">Siguente</a>
+                    <a class="btn btn-success next pull-right" href="#">Siguiente</a>
                   </div>
                 </div>
               </div>
@@ -241,15 +244,14 @@
                       <li>Haz clic en &ldquo;Guardar&rdquo;. </li>
                       <li>Regresa a tu &ldquo;Bandeja de entrada&rdquo; y selecciona la opción de &ldquo;Nuevo mensaje de correo&rdquo; para validar que tu nueva firma esté implementada correctamente </li>
                     </ol>
-
-                    <p><strong>En Thunderbird </strong></p>
+                    <!--<p><strong>En Thunderbird </strong></p>
                     <ol>
                       <li>Haz clic en el menú &ldquo;Herramientas&rdquo;, seguido de &ldquo;Configuración de las cuentas&rdquo;.</li>
                       <li>Marca la casilla &ldquo;Usar HTML&rdquo;.</li>
                       <li>Haz clic en la parte de abajo de la ventana y presiona &ldquo;ctrl+v&rdquo; o haz clic derecho y selecciona la opción &ldquo;Pegar&rdquo;</li>
                       <li>Da clic en &ldquo;Aceptar&rdquo;.</li>
                       <li>Selecciona la opción &ldquo;Nuevo Mensaje&rdquo; para validar que tu nueva firma esté implementada correctamente.</li>
-                    </ol>
+                    </ol>-->
                 </div>
 
                 <div class="col-sm-12">
@@ -261,183 +263,35 @@
               </div>
            </div>
           </div>
-          <!--<div class="modal-footer">
-            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-            <button class="btn btn-primary">Save changes</button>
-          </div>-->
         </div>
       </div>
     </div>
 
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
     <script src="js/bootstrap.js"></script>
-  	<script>
-
-
-
-      $(document).ready(function(){        
-        $('#myModal').modal({backdrop: 'static', keyboard: false})  
-        $('[data-toggle="tooltip"]').tooltip();   
-
-
-
-        $('.next').click(function(){
-          var nextId = $(this).parents('.tab-pane').next().attr("id");
-          $('[href=#'+nextId+']').tab('show');
-          return false;
-        })
-
-        
-        $('.first').click(function(){
-        
-          $('#myWizard a:first').tab('show')
-        
-        })
-
+    <script src="js/firma.js"></script>
+    <script src="js/clipboard.js"></script>
+    <script>
+      var clipboard = new Clipboard('.btn-copy', {
+          target: function() {
+              return document.querySelector('#table');
+          }
       });
 
-  	$(function (){
+      var clipboard = new Clipboard('.btn-copy2', {
+          target: function() {
+              return document.querySelector('#red');
+          }
+      });
 
-  		jQuery.fn.ForceNumericOnly =
-  		    function() {
-  		        return this.each(function() {
-  		            $(this).keydown(function(e) {
-  		                var key = e.charCode || e.keyCode || 0;
-  		                // allow backspace, tab, delete, enter, arrows, numbers and keypad numbers ONLY
-  		                // home, end, period, and numpad decimal
-  		                return (
-  		                    key == 8 ||
-  		                    key == 9 ||
-  		                    key == 13 ||
-  		                    key == 46 ||
-  		                    key == 110 ||
-  		                    key == 190 ||
-  		                    (key >= 35 && key <= 40) ||
-  		                    (key >= 48 && key <= 57) ||
-  		                    (key >= 96 && key <= 105));
-  		            });
-  		        });
-  		    };
+      clipboard.on('success', function(e) {
+          console.log(e);
+      });
 
-      $('[data-toggle="tooltip"]').tooltip();   
-  		$("#phone").ForceNumericOnly();
-      $("#celphone").ForceNumericOnly();
-
-  		$("#nameError").hide();
-  		$("#phoneError").hide();
-  		$("#mailError").hide();
-  		$("#celphoneError").hide();
-
-      $('#lastNameError').hide();
-      $('#html-c').hide();
-      $(".btn-copy, .btn-copy2").hide();
-
-  		var nameErrorMessage = false;
-  		var mailErrorMessage = false;
-  		var phoneErrorMessage = false;
-  		var celphoneErrorMessage = false;
-      var lastName = false;
-
-  		$('#confirm').click(function(){
-  			var playerName = $('#name').val();
-  			var playerMail = $('#mail').val();
-  			var playerPhone = $('#phone').val();
-  			var playerCelPhone = $('#celphone').val();
-        var playerlastName = $('#lastName').val();
-
-  			var name = $("#name").val();
-  			var mail = $("#mail").val();
-  			var phone = $("#phone").val();
-  			var celphone = $("#celphone").val();
-        var lastName = $("#lastName").val();
-
-
-        var codigo = $('#table').html();
-
-  			if(name ==""){
-  				$("#nameError").html("Información requerida");
-  				$("#nameError").show();
-  			} else{
-  				$("#nameError").hide();
-  		      	$(".textOutput").html(playerName);
-  		      	nameErrorMessage = true;
-  			}
-
-  			if(mail ==""){
-  				$("#mailError").html("Información requerida");
-  				$("#mailError").show();
-  			} else{
-  				$("#mailError").hide();
-  				$(".textOutput2").html(playerMail);
-  				mailErrorMessage = true;
-  			}
-
-  			if(phone ==""){
-  				$("#phoneError").html("Información requerida");
-  				$("#phoneError").show();
-  			} else{
-  				$("#phoneError").hide();
-  				$(".textOutput3").html(playerPhone);
-  				phoneErrorMessage = true;
-
-  			}
-
-  			if(celphone ==""){
-  				$("#option").hide()
-  			} else{
-  				$(".textOutput4").html(playerCelPhone);
-  			}
-
-        if(lastName ==""){
-          $("#lastNameError").html("Información requerida");
-          $("#lastNameError").show();
-        } else{
-          $("#lastNameError").hide();
-          $(".textOutputLN").html(playerlastName);
-          celphoneErrorMessage = true;
-
-        }
-
-        if(mail != "" && phone != ""  && name != "" && lastName != "")
-        {
-          $('#html-c').show();
-          $("#red").empty();
-          $("#red").html(codigo);
-          $(".btn-copy, .btn-copy2").show();
-        }
-
-  		});
-  	});
-  	</script>
-    <script src="js/clipboard.js"></script>
-
-    <!-- 1. Define some markup -->
-
-    <!-- 3. Instantiate clipboard -->
-    <script>
-    var clipboard = new Clipboard('.btn-copy', {
-        target: function() {
-            return document.querySelector('#table');
-        }
-    });
-
-    var clipboard = new Clipboard('.btn-copy2', {
-        target: function() {
-            return document.querySelector('#red');
-        }
-    });
-
-    clipboard.on('success', function(e) {
-        console.log(e);
-    });
-
-    clipboard.on('error', function(e) {
-        console.log(e);
-    });
+      clipboard.on('error', function(e) {
+          console.log(e);
+      });
     </script>
-
-
-
   </body>
 </html>
 
