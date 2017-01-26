@@ -67,7 +67,6 @@
       </div>
 
     <div class="container boxed">
-      <a href="#myModal" data-target="#myModal" data-toggle="modal" data-backdrop="static" data-keyboard="false" class="btn btn-success" style="margin: 15px 0;">Ver Instrucciones</a>
       <div class="row">
       	<div class="col-sm-4">
       		<div class="gordon">
@@ -160,7 +159,17 @@
               </div>
             </div>
 
-            <button class="btn btn-default btn-copy">Copiar para Outlook</button>
+            <div class="col-sm-6">
+              <div class="row">
+                <a href="#myModal" data-target="#myModal" data-toggle="modal" data-backdrop="static" data-keyboard="false" class="btn btn-copy btn-default">Agregar firma a Outlook</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="row">
+                <button class="btn  btn-copy btn-success"">Copiar firma</button>
+              </div>
+            </div>
     	  	</div>
 
 
@@ -184,99 +193,50 @@
             <h3 id="myModalLabel">Instrucciones</h3>
             <p>Lee atentamente las instrucciones:</p>
           </div>
-          <div class="modal-body" id="myWizard">
-           <div class="navbar">
-              <div class="navbar-inner">
-                    <ul class="nav nav-pills">
-                       <li class="active"><a href="#step1" data-toggle="tab" data-step="1">Paso 1</a></li>
-                       <li><a href="#step2" data-toggle="tab" data-step="2">Paso 2</a></li>
-                       <li><a href="#step3" data-toggle="tab" data-step="3">Paso 3</a></li>
-                    </ul>
+          <div class="modal-body clearfix">
+            <p>
+              Sigue las instrucciones indicadas, según tu versión de Outlook.
+            </p>
+
+            <div class="box">
+                <p><strong>Outlook (Escritorio): </strong></p>
+                <ol>
+                  <li>Selecciona &quot;Archivo&quot; y luego &quot;Opciones&quot; </li>
+                  <li>Elige la opción de &quot;Correo&quot;; valida que en la opción &ldquo;Redactar mensaje en este formato&rdquo; esté seleccionada la casilla &quot;HTML&rdquo; </li>
+                  <li>Después, haz clic en &quot;Firma&quot; y selecciona la opción de &ldquo;Nueva&rdquo;; ponle algún nombre (ejemplo: firma If, If Interfactura. Tu nombre, etc.) </li>
+                  <li>Haz clic en la parte de abajo de la ventana y presiona &ldquo;ctrl+v&rdquo; o haz clic derecho y selecciona la opción &ldquo;Pegar&rdquo; </li>
+                  <li>Haz clic en &ldquo;Guardar&rdquo;. </li>
+                  <li>En la sección de &ldquo;Elegir firma predeterminada&rdquo; cerciórate que tu correo aparezca ahí. Verifica que tengas seleccionada la firma que acabas de crear en las opciones &ldquo;Mensajes Nuevos&rdquo; y &ldquo;Respuestas o Reenvíos&rdquo;. </li>
+                  <li>Haz clic en &ldquo;Aceptar&rdquo; y repite esta opción en las opciones de correo. </li>
+                  <li>Selecciona la opción &ldquo;Nuevo Mensaje de correo electrónico&rdquo; para validar que tu nueva firma esté implementada correctamente. </li>
+                </ol>
+
+                <p><strong>Outlook (Office 365 En línea): </strong></p>
+                <ol>
+                  <li>Haz clic en &quot;Configurar&quot; (icono del engrane) luego seleccionar &quot;Correo&quot; </li>
+                  <li>Selecciona la opción de &quot;Firma de correo electrónico&rdquo; </li>
+                  <li>Haz clic en la parte inferior de la ventana y presiona &ldquo;ctrl+v&rdquo; o haz clic derecho y selecciona la opción &ldquo;Pegar&rdquo; </li>
+                  <li>Marca las casillas de: </li>
+                  <ul>
+                    <li>&ldquo;Incluir mi firma automáticamente en los mensajes nuevos que redacte&rdquo; </li>
+                    <li>&ldquo;Incluir automáticamente mi firma en los mensajes que reenvíe o responda&rdquo; </li>
+                  </ul>
+                  <li>Haz clic en &ldquo;Guardar&rdquo;. </li>
+                  <li>Regresa a tu &ldquo;Bandeja de entrada&rdquo; y selecciona la opción de &ldquo;Nuevo mensaje de correo&rdquo; para validar que tu nueva firma esté implementada correctamente </li>
+                </ol>
+            </div>
+
+            <div class="col-sm-12">
+              <div class="row">
+                <hr>
+                <a class="btn btn-success pull-right" data-dismiss="modal" aria-hidden="true">Aceptar</a>
               </div>
-           </div>
-           <div class="tab-content ">
-              <div class="tab-pane fade in active clearfix" id="step1">
-                <p>Ingresa la información requerida</p>
-                <div class="col-sm-offset-2 col-sm-8">
-                  <video width="90%" autoplay loop style="margin: 0 auto;">
-                    <source src="video/datos.mp4" type="video/mp4">
-                    <source src="video/datos.ogv" type="video/ogv">
-                    Your browser does not support HTML5 video.
-                  </video>
-                </div>
-                <div class="col-sm-12">
-                  <div class="row">
-                    <hr>
-                    <a class="btn btn-success next pull-right" href="#">Siguiente</a>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="tab-pane fade clearfix" id="step2">
-                <p>Utiliza el botón <b>"Copiar"</b> para agregar tu firma al <i data-toggle="tooltip" title="Portapapales"><b>"clipboard"</b></i></p>
-                <div class="col-sm-offset-2 col-sm-8"><img src="img/img2.png" alt="" class="img-responsive"></div>
-                <div class="col-sm-12">
-                  <div class="row">
-                    <hr>
-                    <a class="btn btn-success next pull-right" href="#">Siguiente</a>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade clearfix" id="step3">
-                <p>
-                  Sigue las instrucciones indicadas, según tu versión de Outlook.
-                </p>
-
-                <div class="box">
-                    <p><strong>Outlook (Escritorio): </strong></p>
-                    <ol>
-                      <li>Selecciona &quot;Archivo&quot; y luego &quot;Opciones&quot; </li>
-                      <li>Elige la opción de &quot;Correo&quot;; valida que en la opción &ldquo;Redactar mensaje en este formato&rdquo; esté seleccionada la casilla &quot;HTML&rdquo; </li>
-                      <li>Después, haz clic en &quot;Firma&quot; y selecciona la opción de &ldquo;Nueva&rdquo;; ponle algún nombre (ejemplo: firma If, If Interfactura. Tu nombre, etc.) </li>
-                      <li>Haz clic en la parte de abajo de la ventana y presiona &ldquo;ctrl+v&rdquo; o haz clic derecho y selecciona la opción &ldquo;Pegar&rdquo; </li>
-                      <li>Haz clic en &ldquo;Guardar&rdquo;. </li>
-                      <li>En la sección de &ldquo;Elegir firma predeterminada&rdquo; cerciórate que tu correo aparezca ahí. Verifica que tengas seleccionada la firma que acabas de crear en las opciones &ldquo;Mensajes Nuevos&rdquo; y &ldquo;Respuestas o Reenvíos&rdquo;. </li>
-                      <li>Haz clic en &ldquo;Aceptar&rdquo; y repite esta opción en las opciones de correo. </li>
-                      <li>Selecciona la opción &ldquo;Nuevo Mensaje de correo electrónico&rdquo; para validar que tu nueva firma esté implementada correctamente. </li>
-                    </ol>
-
-                    <p><strong>Outlook (Office 365 En línea): </strong></p>
-                    <ol>
-                      <li>Haz clic en &quot;Configurar&quot; (icono del engrane) luego seleccionar &quot;Correo&quot; </li>
-                      <li>Selecciona la opción de &quot;Firma de correo electrónico&rdquo; </li>
-                      <li>Haz clic en la parte inferior de la ventana y presiona &ldquo;ctrl+v&rdquo; o haz clic derecho y selecciona la opción &ldquo;Pegar&rdquo; </li>
-                      <li>Marca las casillas de: </li>
-                      <ul>
-                        <li>&ldquo;Incluir mi firma automáticamente en los mensajes nuevos que redacte&rdquo; </li>
-                        <li>&ldquo;Incluir automáticamente mi firma en los mensajes que reenvíe o responda&rdquo; </li>
-                      </ul>
-                      <li>Haz clic en &ldquo;Guardar&rdquo;. </li>
-                      <li>Regresa a tu &ldquo;Bandeja de entrada&rdquo; y selecciona la opción de &ldquo;Nuevo mensaje de correo&rdquo; para validar que tu nueva firma esté implementada correctamente </li>
-                    </ol>
-
-                    <!--<p><strong>En Thunderbird </strong></p>
-                    <ol>
-                      <li>Haz clic en el menú &ldquo;Herramientas&rdquo;, seguido de &ldquo;Configuración de las cuentas&rdquo;.</li>
-                      <li>Marca la casilla &ldquo;Usar HTML&rdquo;.</li>
-                      <li>Haz clic en la parte de abajo de la ventana y presiona &ldquo;ctrl+v&rdquo; o haz clic derecho y selecciona la opción &ldquo;Pegar&rdquo;</li>
-                      <li>Da clic en &ldquo;Aceptar&rdquo;.</li>
-                      <li>Selecciona la opción &ldquo;Nuevo Mensaje&rdquo; para validar que tu nueva firma esté implementada correctamente.</li>
-                    </ol>-->
-                </div>
-
-                <div class="col-sm-12">
-                  <div class="row">
-                    <hr>
-                    <a class="btn btn-success pull-right" data-dismiss="modal" aria-hidden="true">Aceptar</a>
-                  </div>
-                </div>
-              </div>
-           </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
       <script src="js/bootstrap.js"></script>
       <script src="js/firma.js"></script>
