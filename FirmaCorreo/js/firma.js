@@ -1,6 +1,6 @@
 
     $(document).ready(function(){        
-      $('#myModal').modal({backdrop: 'static', keyboard: true})  
+      //$('#myModal').modal({backdrop: 'static', keyboard: true})  
       $('[data-toggle="tooltip"]').tooltip();   
 
 
