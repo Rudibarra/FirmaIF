@@ -92,6 +92,7 @@
 				var phone = $("#phone").val();
 				var celphone = $("#celphone").val();
 				var mail = $("#mail").val();
+				var isValid = true;
 
 
 
@@ -102,6 +103,7 @@
 					$("#nameError").html("Información requerida");
 					$("#nameError").show();
 				} else{
+					isValid = false;
 					$("#nameError").hide();
 			      	$(".textOutput").html(name);
 			      	nameErrorMessage = true;
@@ -111,6 +113,7 @@
 				  $("#lastNameError").html("Información requerida");
 				  $("#lastNameError").show();
 				} else{
+					isValid = false;
 				  $("#lastNameError").hide();
 				  $(".textOutputLN").html(lastName);
 				  celphoneErrorMessage = true;
@@ -120,6 +123,7 @@
 					$("#mailError").html("Información requerida");
 					$("#mailError").show();
 				} else{
+					isValid = false;
 					$("#mailError").hide();
 					$(".textOutput2").html(mail);
 					mailErrorMessage = true;
@@ -129,6 +133,7 @@
 					$("#fixedPhoneError").html("Información requerida");
 					$("#fixedPhoneError").show();
 				} else{
+					isValid = false;
 					$("#fixedPhoneError").hide();
 					$(".textOutputFXP").html(fixedPhone);
 					phoneErrorMessage = true;
@@ -141,6 +146,7 @@
 					$("#phoneError").html("Información requerida");
 					$("#phoneError").show();
 				} else{
+					isValid = false;
 					$("#phoneError").hide();
 					$(".textOutput3").html(phone);
 					phoneErrorMessage = true;
@@ -151,23 +157,27 @@
 				if(celphone ==""){
 					$("#option").hide()
 				}else{
-						$("#option").show()
-						$(".textOutput4").html(celphone);
+					isValid = false;
+					$("#option").show()
+					$(".textOutput4").html(celphone);
 				}
+
+
 
 				if($('input[name="fixed"]').is(':checked')) {
 				  $("#multiplePhoneError").hide();
 				}
 
 				else{
-				  $("#multiplePhoneError").show();
-				  $("#multiplePhoneError").html("Información requerida");
+					isValid = false;
+					$("#multiplePhoneError").show();
+					$("#multiplePhoneError").html("Información requerida");
 				}
 
 
 
 
-				if(name != "" && lastName != "" && mail != "" && fixedPhone != "" && phone != "")
+				if(isValid && $('input[name="fixed"]:checked'))
 				{
 					$(".btn-copy").show();
 					/*$('#html-c').show();
