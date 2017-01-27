@@ -153,6 +153,14 @@ h4 {
   background: white;
   padding: 15px;
 }
+.esp {
+  display: block;
+  width: 100%;
+}
+.esp input[type=radio] {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
 /*Backtrend
 ---------------------*/
 .bt .active-ft {

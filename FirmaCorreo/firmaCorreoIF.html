@@ -93,9 +93,13 @@
               </div>
 
               <div class="form-group">
-                <label>Teléfono fijo</label>
-                <input id="fixedPhone" type="text" name="textInput" class="form-control" maxlength="30" placeholder="(00) 0000 0000"/>
-                <div id="fixedPhoneError" class="errors"></div>
+                <label>Selecciona teléfono fijo</label>
+                <div class="esp" id="multiplePhone">
+                  <label><input type="radio" value="MTY" name="fixed"><b>Monterrey:</b> (81) 4777-1100</label><br>
+                  <label><input type="radio" value="CDMX1" name="fixed" ><b>CDMX (1):</b> (55) 4777-1100</label><br>
+                  <label><input type="radio" value="CDMX2" name="fixed" ><b>CDMX (2):</b> (55) 6236-8700</label>
+                </div>
+                <div id="multiplePhoneError" class="errors"></div>
               </div>
 
   		        <div class="form-group">
@@ -134,7 +138,7 @@
                             <tr>
                               <td valign="botton" height="22"><font size="5" color="#00a8e1"><strong><span class="textOutput">Nombre</span> <span class="textOutputLN">Apellido</span></strong></font><br>
                                 <font size="3"><strong><span class="textOutput2">correo@interfactura.gdx.io</span></strong></font><br><br>
-                                    <font size="2"><strong>T.</strong> +52 <span class="textOutputFXP">(00) 0000 0000</span> <strong>Ext.</strong> <span class="textOutput3">0000</span><br>
+                                    <font size="2"><strong>T.</strong> +52 <span class="textOutputFXP2">(00) 0000-0000 </span> <strong>Ext.</strong> <span class="textOutput3">0000</span><br>
                                   <span id="option"><strong>C.</strong> +52 1 <span class="textOutput4">(00) 0000 0000</span></span></font>
                                 </td>
                               </tr>
@@ -246,6 +250,48 @@
       <script src="js/bootstrap.js"></script>
       <script src="js/firma.js"></script>
       <script src="js/clipboard.js"></script>
+
+      <script>
+        $("#multiplePhoneError").hide();
+
+        var multiplePhone = $('input[name="fixed"]');
+
+        $('#confirm').click(function(){
+          if($('input[name="fixed"]').is(':checked')) {
+            $("#multiplePhoneError").hide();
+          }
+
+          else{
+            $("#multiplePhoneError").show();
+            $("#multiplePhoneError").html("Información requerida");
+          }
+        });
+
+        $(multiplePhone).on('change', function(){
+            if ($(this).val()=='MTY') {
+                 //change to "show update"
+                 $(".textOutputFXP2").text("(81) 4777-1100");
+            }
+
+            if ($(this).val()=='CDMX1') {
+                 //change to "show update"
+                 $(".textOutputFXP2").text("(55) 4777-1100");
+            }
+
+            if ($(this).val()=='CDMX2') {
+                 //change to "show update"
+                 $(".textOutputFXP2").text("(55) 6236-8700");
+            }
+        });
+
+
+
+
+
+
+
+      </script>
+
       <script>
           var clipboard = new Clipboard('.btn-copy', {
               target: function() {

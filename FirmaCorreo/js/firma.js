@@ -1,7 +1,7 @@
 
-    $(document).ready(function(){        
-      //$('#myModal').modal({backdrop: 'static', keyboard: true})  
-      $('[data-toggle="tooltip"]').tooltip();   
+    $(document).ready(function(){
+      //$('#myModal').modal({backdrop: 'static', keyboard: true})
+      $('[data-toggle="tooltip"]').tooltip();
 
 
 
@@ -11,11 +11,11 @@
         return false;
       })
 
-      
+
       $('.first').click(function(){
-      
-        $('#myWizard a:first').tab('show')
-      
+
+      $('#myWizard a:first').tab('show')
+
       })
 
     });
@@ -54,6 +54,7 @@
 		$("#fixedPhoneError").hide();file:///Users/Interfactura/Desktop/Github-Pruebas/FirmaIF/FirmaCorreo/firmaCorreoJuno.html#
 		$("#phoneError").hide();
 		$("#celphoneError").hide();
+		$("#multiplePhoneError").hide();
 
 	    /*$('#html-c').hide();
 	    $(".btn-copy, .btn-copy2").hide();*/
@@ -65,6 +66,8 @@
 		var fixedPhoneError = false;
 		var phoneErrorMessage = false;
 		var celphoneErrorMessage = false;
+
+		var multiplePhoneError = false;
 
 
 		$('#confirm').click(function(){
@@ -81,6 +84,8 @@
 			var celphone = $("#celphone").val();
 			var mail = $("#mail").val();
 
+
+			var multiplePhone = $('input[name="fixed"]').is(":checked");
 
       		var codigo = $('#table').html();
 
@@ -118,8 +123,10 @@
 				$("#fixedPhoneError").hide();
 				$(".textOutputFXP").html(fixedPhone);
 				phoneErrorMessage = true;
-
 			}
+
+
+
 
 			if(phone ==""){
 				$("#phoneError").html("Información requerida");
@@ -130,12 +137,16 @@
 				phoneErrorMessage = true;
 			}
 
+
+
 			if(celphone ==""){
 				$("#option").hide()
 			}else{
 					$("#option").show()
 					$(".textOutput4").html(celphone);
 			}
+
+
 
 
 			if(name != "" && lastName != "" && mail != "" && fixedPhone != "" && phone != "")
