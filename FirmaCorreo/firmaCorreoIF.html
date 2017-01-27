@@ -252,47 +252,6 @@
       <script src="js/clipboard.js"></script>
 
       <script>
-        $("#multiplePhoneError").hide();
-
-        var multiplePhone = $('input[name="fixed"]');
-
-        $('#confirm').click(function(){
-          if($('input[name="fixed"]').is(':checked')) {
-            $("#multiplePhoneError").hide();
-          }
-
-          else{
-            $("#multiplePhoneError").show();
-            $("#multiplePhoneError").html("Información requerida");
-          }
-        });
-
-        $(multiplePhone).on('change', function(){
-            if ($(this).val()=='MTY') {
-                 //change to "show update"
-                 $(".textOutputFXP2").text("(81) 4777-1100");
-            }
-
-            if ($(this).val()=='CDMX1') {
-                 //change to "show update"
-                 $(".textOutputFXP2").text("(55) 4777-1100");
-            }
-
-            if ($(this).val()=='CDMX2') {
-                 //change to "show update"
-                 $(".textOutputFXP2").text("(55) 6236-8700");
-            }
-        });
-
-
-
-
-
-
-
-      </script>
-
-      <script>
           var clipboard = new Clipboard('.btn-copy', {
               target: function() {
                   return document.querySelector('#table');
