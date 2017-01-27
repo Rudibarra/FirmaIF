@@ -161,7 +161,7 @@
 
 				else{
 				  $("#multiplePhoneError").show();
-				  $("#multiplePhoneError").html("Información requerida");
+				  $("#multiplePhoneError").html("Selecciona un teléfono fijo");
 				}
 
 
@@ -199,4 +199,6 @@
 	         //change to "show update"
 	         $(".textOutputFXP2").text("(55) 6236-8700");
 	    }
+
+	    $("#multiplePhoneError").hide();
 	});
