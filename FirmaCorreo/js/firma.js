@@ -59,6 +59,7 @@
 	    $('#html-c').hide();
 	    $(".btn-copy, .btn-copy2").hide();
 	    $(".btn-copy").hide();
+	    $(".btn-copy4").hide();
 
 		var nameErrorMessage = false;
 		var lastName = false;
@@ -91,6 +92,8 @@
 				var phone = $("#phone").val();
 				var celphone = $("#celphone").val();
 				var mail = $("#mail").val();
+
+
 
 
 				if(name ==""){
@@ -166,7 +169,7 @@
 				{
 
 					$('#html-c').show();
-					$(".btn-copy, .btn-copy2").show();
+					$(".btn-copy, .btn-copy2, .btn-copy4").show();
 					
 					var codigo = $('#table').html();
 					$("#red").html(codigo);

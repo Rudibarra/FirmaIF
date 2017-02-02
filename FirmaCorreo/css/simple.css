@@ -85,7 +85,8 @@ h2 {
   height: 300px;
   margin: 0 0 15px 0;
 }
-.btn-copy {
+.btn-copy,
+.btn-copy4 {
   margin-top: 15px;
 }
 hr {
@@ -97,6 +98,9 @@ h4 {
   margin: 0 0 15px 0;
   border-bottom: 1px solid #CCCCCC;
 }
+.mb15 {
+  margin-bottom: 15px;
+}
 .cw50 {
   width: 50%;
 }
@@ -104,7 +108,7 @@ h4 {
   font-weight: bold;
 }
 .modal-header {
-  padding: 15px 15px 0px 15px;
+  padding: 15px 15px 15px 15px;
   border-bottom: none;
 }
 .modal-header h3 {
