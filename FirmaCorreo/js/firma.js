@@ -56,8 +56,8 @@
 		$("#celphoneError").hide();
 
 
-	    /*$('#html-c').hide();
-	    $(".btn-copy, .btn-copy2").hide();*/
+	    $('#html-c').hide();
+	    $(".btn-copy, .btn-copy2").hide();
 	    $(".btn-copy").hide();
 
 		var nameErrorMessage = false;
@@ -78,7 +78,6 @@
 
 
 
-
 			$('#confirm').click(function(){
 				/*var playerName = $('#name').val();
 				var playerMail = $('#mail').val();
@@ -93,10 +92,6 @@
 				var celphone = $("#celphone").val();
 				var mail = $("#mail").val();
 
-
-
-
-	      		var codigo = $('#table').html();
 
 				if(name ==""){
 					$("#nameError").html("Información requerida");
@@ -169,17 +164,17 @@
 
 				if(name != "" && lastName != "" && mail != "" && fixedPhone != "" && phone != "")
 				{
-					$(".btn-copy").show();
-					/*$('#html-c').show();
-					$("#red").empty();
-					$("#red").html(codigo);
-					$(".btn-copy, .btn-copy2").show();*/
-				}
 
-				var email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+					$('#html-c').show();
+					$(".btn-copy, .btn-copy2").show();
+					
+					var codigo = $('#table').html();
+					$("#red").html(codigo);
+				}
 
 
 			});
+
 
 
   //AGREGAR TELEFONO  AL SELECCIONAR RADIO
